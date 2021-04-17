@@ -42,4 +42,4 @@ jobs:
 
     - name: Test with pytest
       run: |
-        pytest  --cov=json2mqtt tests/
+        pytest  --cov=flask_wifiqr tests/
