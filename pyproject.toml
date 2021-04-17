@@ -5,7 +5,7 @@ requires         = [
 ]
 
 [tool.flit.metadata]
-module           = "wifiqr"
+module           = "flask_wifiqr"
 author           = "Flip Hess"
 author-email     = "flip@fliphess.com"
 home-page        = "https://github.com/fliphess/wifiqr"

@@ -1,7 +1,7 @@
 import logging
 
 from unittest import TestCase
-from wifiqr.__main__ import app
+from flask_wifiqr.__main__ import app
 
 
 class TestWifiQREndpoints(TestCase):
