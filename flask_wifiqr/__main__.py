@@ -12,13 +12,22 @@ app = Flask(
 qrcode = QRcode(app)
 
 
+@app.after_request
+def add_header(r):
+    r.headers["Cache-Control"] = "no-cache, no-store, must-revalidate"
+    r.headers["Pragma"] = "no-cache"
+    r.headers["Expires"] = "0"
+    r.headers['Cache-Control'] = 'public, max-age=0'
+    return r
+
+
 @app.route("/qrcode", methods=["GET"])
 def get_qrcode():
     ssid = os.getenv('WIFI_SSID', 'unknown')
     password = os.getenv('WIFI_PASSWORD', 'notset')
 
     return send_file(
-        qrcode(f"WIFI:S:{ssid};T:WPA;P:{password};;", mode="raw", border=5, box_size=20),
+        qrcode(f"WIFI:S:{ssid};T:WPA;P:{password};;", mode="raw"),
         mimetype="image/png"
     )
 
