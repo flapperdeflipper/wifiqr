@@ -2,9 +2,22 @@
 <html>
     <head>
         <title>WifiQR</title>
+        <style>
+            div.shadow {
+                display: flex;
+                justify-content: center;
+		align-items: center;
+            }
+            img.qrcode {
+	        width: 60%;
+            }
+        </style>
     </head>
     <body>
         <h1>Wifi Access:</h1>
-        <img src="qrcode">
+	    <div class="shadow">
+                 <img src="qrcode" alt="qrcode" class="qrcode">
+	    </div>
+
     </body>
 </html>
