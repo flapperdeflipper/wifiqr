@@ -10,7 +10,7 @@ until you are prompted to connect to the WIFI ssid given in the QR.
 To run:
 
 ```
-pip install wifiqr
+pip install flask_wifiqr
 
 
 export WIFI_PASSWORD="some_password
